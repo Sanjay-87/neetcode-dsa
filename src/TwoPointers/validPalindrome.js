@@ -1,0 +1,18 @@
+let s = "A man, a plan, a canal: Panama";
+
+var isPalindrome = function(s) {
+    s = s.replace(/[^0-9a-zA-Z]/g, '').toLowerCase();
+    let left = 0, right = s.length - 1;
+
+    while (left < right) {
+        if (s[left] !== s[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+
+    return true
+};
+
+console.log(s.replace(/[0-9a-zA-Z]/g, ''))
